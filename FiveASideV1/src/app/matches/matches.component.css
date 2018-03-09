@@ -1,4 +1,19 @@
 /* matchesComponent's private CSS styles */
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.boardered {
+  border-style: solid;
+  width:30em;
+}
+
+.h3 {
+  text-align: center;
+}
+
 .matches {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -66,7 +81,15 @@ button:hover {
 
 button.delete {
   position: relative;
-  left: 26.5em;
+  left: 24em;
+  top: -33.5px;
+  background-color: gray !important;
+  color: white;
+}
+
+button.edit {
+  position: relative;
+  left: 24em;
   top: -33.5px;
   background-color: gray !important;
   color: white;

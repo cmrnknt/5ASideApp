@@ -1,23 +1,35 @@
 <div *ngIf="match"> 
-
+<ul>
   <h2>{{match.title | uppercase}}</h2>
- <div>
-    <label> 
+  <div>
+    <li>
+      <label> 
         Title: <input [(ngModel)]="match.title" placeholder="Match Heading">
       </label>
-      <label> 
-        Status: <input [(ngModel)]="match.status" placeholder="Status">
-      </label>
+    </li>
+    <li>
+    <label> 
+      Status: <input [(ngModel)]="match.status" placeholder="Status">
+    </label>
+    </li>
+    <li>
       <label> 
         Opponent: <input [(ngModel)]="match.opponent" placeholder="Opponent">
       </label>
+    </li>
+    <li>
       <label> 
         Time: <input [(ngModel)]="match.time" placeholder="Time">
       </label>
+    </li>
+    <li>
       <label> 
         Court: <input [(ngModel)]="match.court" placeholder="Court">
-      </label>
-
+      </label>  
+    </li>
   </div>  
+</ul>
+
+  <button (click)="save(match)">save</button>
   <button (click)="goBack()">go back</button>
 </div>

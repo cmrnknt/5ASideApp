@@ -2,12 +2,48 @@
 <h2>Matches</h2>
 
 <ul class = "matches">
-  <li *ngFor="let match of matches">
-    <a routerLink = "/detail/{{match.id}}">
+  <li *ngFor="let match of matches"
+    [class.selected]="match === selectedMatch"
+    (click)="onSelect(match)">
+    <a>
       <span class = "badge">{{match.id}}</span> {{match.title}} ({{match.opponent}})
     </a>
+    <button class="edit" title="Edit match" routerLink = "/detail/{{match.id}}">e</button>
     <button class="delete" title="Delete match" (click)="delete(match)">x</button>
   </li>
 </ul>
 
-
+<div class="boardered" *ngIf="selectedMatch">
+    <h3>{{selectedMatch.title}}</h3>
+    <div>
+      <ul>
+        <li>
+          {{selectedMatch.id}}  
+        </li>
+        <li>
+          {{selectedMatch.title}}  
+        </li>
+        <li>
+          {{selectedMatch.status}}  
+        </li>
+        <li>
+          {{selectedMatch.opponent}}  
+        </li>
+        <li>
+          {{selectedMatch.time}}  
+        </li>
+        <li>
+          {{selectedMatch.court}}  
+        </li>
+        <li>
+          {{selectedMatch.goalsFor}}  
+        </li>
+        <li>
+          {{selectedMatch.goalsAgainst}}  
+        </li>
+        <li>
+          {{selectedMatch.players}}  
+        </li>
+      </ul>
+    </div>
+</div>
