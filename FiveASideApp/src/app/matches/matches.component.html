@@ -1,0 +1,22 @@
+
+<h2>Matches</h2>
+<ul class = "matches">
+  <li *ngFor="let match of matches" 
+    [class.selected]="match === selectedMatch"
+    (click)="onSelect(match)">  
+      <span class="badge">{{match.id}}</span>{{match.title}}
+  </li>
+</ul>
+
+
+<div *ngIf="selectedMatch"> 
+
+  <h2>{{selectedMatch.title | uppercase}}</h2>
+ <div>
+    <label>
+      Title: 
+      <input ([ngModel])="selectedMatch.title" placeholder="Match Heading">
+    </label>
+  </div>
+
+</div>

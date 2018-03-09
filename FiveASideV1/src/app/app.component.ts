@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'LexisNexis Five a Side';
+  title = 'Lexis Nexis Five a Side';
 }

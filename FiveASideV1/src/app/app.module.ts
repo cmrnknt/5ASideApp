@@ -3,22 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { MatchComponent } from './match/match.component';
 import { MatchesComponent } from './matches/matches.component';
-import { PlayerComponent } from './player/player.component';
-import { StatisticComponent } from './statistic/statistic.component';
-
+import { MatchDetailsComponent } from './match-details/match-details.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { FormsModule } from '@angular/forms'// <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatchComponent,
     MatchesComponent,
-    PlayerComponent,
-    StatisticComponent
+    MatchDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

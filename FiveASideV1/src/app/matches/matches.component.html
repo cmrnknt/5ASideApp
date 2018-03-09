@@ -1,0 +1,13 @@
+
+<h2>Matches</h2>
+
+<ul class = "matches">
+  <li *ngFor="let match of matches">
+    <a routerLink = "/detail/{{match.id}}">
+      <span class = "badge">{{match.id}}</span> {{match.title}} ({{match.opponent}})
+    </a>
+    <button class="delete" title="Delete match" (click)="delete(match)">x</button>
+  </li>
+</ul>
+
+
